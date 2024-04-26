@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">  
+    <title>SLEEP HOUR</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="boxicons/css/boxicons.css"> -->
+  </head>
+  <body>
+    
+    <div class="clock">
+      <div class="hour">
+        <div class="hr" id="hr"></div>
+      </div>
+      <div class="min">
+        <div class="mn" id="mn"></div>
+      </div>
+      <div class="sec">
+        <div class="sc" id="sc"></div>
+      </div>
+    </div>
+
+    <script>
+
+      const deg = 6;
+      const hr = document.querySelector('#hr');
+      const mn = document.querySelector('#mn');
+      const sc = document.querySelector('#sc');
+
+      setInterval(() => {
+        let day = new Date();
+        let hh = day.getHours() * 30;
+        let mm = day.getMinutes() * deg;
+        let ss = day.getSeconds() * deg;
+
+        hr.style.transform = `rotateZ(${(hh) + (mm/12)}deg)`;
+        mn.style.transform = `rotateZ(${mm}deg)`;
+        sc.style.transform = `rotateZ(${ss}deg)`;
+
+      });
+
+    </script>
+
+  </body>
+  <head>
+    <meta charset="utf-8">  
+    <title>SINERGIA -> YOUTUBE</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" 
+    href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  </head>
+  <body>
+    
+    <div class="wrapper">
+      <i class="uil uil-volume-mute" id="icon"></i>
+      <input type="range" min="0" step="1" max="100" value="0">
+      <span class="slide-value">0</span>
+    </div>
+
+    <script src="script.js"></script>
+
+  </body>
+
+  <head>
+    <meta charset="utf-8">  
+    <title>SLEEP HOUR</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" 
+    href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"> -->
+  </head>
+  <body>
+    
+    <nav>
+      <a href="perfil.html">Configuración</a>
+      <a href="info.html">Sobre nosotros</a>
+      <a href="pagos.html">Hazte Premiun</a>
+      <span></span>
+    </nav>
+
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIGHT</title>
+    <link rel="stylesheet" href="../codigo/style.css">
+</head>
+<body>
+    <div class="foco">
+        <img id="cambiarFoco" src="../imagenes/encendido-1.png" alt="">
+    </div>
+    <button class="switch">
+        <img id="cambiarInterruptor" src="../imagenes/on-or.png" alt="">
+    </button>
+</body>
+<script src="script.js"
+></script>
+</html>
